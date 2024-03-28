@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+j92Q48Rq1nCx3+n2siFAuWNtgQOjfB77E51UrQPgB93fZXa9y5E4vyamMXGAXNTpUCZDgtqpNys1E8w/9LE0w==",
+  "dgSpecHash": "83ZhqI6H8qSv80gD4lyKjShx4enfbNm0MdeV7wVI+sAfJo1tJOLLhr895ztnxi/7hjE8/hVjrJUWIMcaqYOECQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Desktop\\Git\\arrays-csharp-microsoft-project\\Guided-project-foreach-if-array-CSharp-main\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\Starter.csproj",
-  "expecte
+  "projectFilePath": "/workspace/arrays-csharp-microsoft-project/GuidedProject/Starter/Starter.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+}
