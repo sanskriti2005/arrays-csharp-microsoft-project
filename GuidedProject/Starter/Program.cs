@@ -15,8 +15,8 @@ int[] studentScores = new int[10];
 
 string currentStudentLetterGrade = "";
 
-decimal examScore = 0;
-decimal extraCredit = 0;
+
+
 
 Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
@@ -29,21 +29,27 @@ foreach (string name in studentNames)
         studentScores = sophiaScores;
 
     else if (currentStudent == "Andrew")
-    studentScores = andrewScores;
+        studentScores = andrewScores;
 
     else if (currentStudent == "Emma")
-    studentScores = emmaScores;
+        studentScores = emmaScores;
 
     else if (currentStudent == "Logan")
-    studentScores = loganScores;
+        studentScores = loganScores;
 
     
 
     //initialize/reset the sum of scored assignments
     int sumAssignmentScore = 0;
 
+    decimal examScore = 0;
+    decimal extraCredit = 0;
+
     //initialize/reset the calculated averge of exams + extra credit scores
     decimal currentStudentGrade = 0;
+
+    decimal examScoreGrade = 0;
+    decimal extraCreditGrade = 0;
 
     //initialize/reset a counter for the number of assignments
     int gradedAssignments = 0;
@@ -58,11 +64,12 @@ foreach (string name in studentNames)
         
         else 
             // extra credit 
-            extraCredit = (decimal) score / 10;
+            extraCredit += (decimal) score / 10;
 
         if (gradedAssignments <= examAssignments)
             // add the exam score to the sum
             sumAssignmentScore += score;
+            
         
         else 
             // extra credit + exam score
@@ -70,8 +77,11 @@ foreach (string name in studentNames)
 
     }
 
+    
     examScoreGrade = (decimal)examScore / examAssignments;
     extraCreditGrade = (decimal)extraCredit / examAssignments; 
+
+    int examScoreInt = (int) examScoreGrade;
     currentStudentGrade = (decimal)sumAssignmentScore / examAssignments;
 
     // Grades
@@ -114,7 +124,7 @@ foreach (string name in studentNames)
     else 
         currentStudentLetterGrade = "F";
     
-    Console.WriteLine($"{currentStudent}\t\t{examScoreGrade}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{extraCredit}");
+    Console.WriteLine($"{currentStudent}\t\t{examScoreGrade}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{examScoreInt} ({extraCreditGrade} pts)");
     
 }
 
